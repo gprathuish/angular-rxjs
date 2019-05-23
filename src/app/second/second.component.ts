@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { SampleService } from './sample.service';
 import { Subscription } from 'rxjs';
+import { SampleService } from '../sample.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-second',
+  templateUrl: './second.component.html',
+  styleUrls: ['./second.component.css']
 })
-export class AppComponent implements OnInit {
-  title = 'angular-rxjs';
-
+export class SecondComponent implements OnInit {
   message: any;
   subscription: Subscription;
 
@@ -25,6 +23,4 @@ export class AppComponent implements OnInit {
       // unsubscribe to ensure no memory leaks
       this.subscription.unsubscribe();
   }
-
-
 }
